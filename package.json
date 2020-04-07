@@ -1,0 +1,19 @@
+{
+  "name": "spa-text",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fanningyuan/spa-text.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fanningyuan/spa-text/issues"
+  },
+  "homepage": "https://github.com/Fanningyuan/spa-text#readme"
+}
