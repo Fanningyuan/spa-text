@@ -1,4 +1,3 @@
-/* exported $editor */
 var $editor = (function() {
   var $DOM = $(''
       + '<div class="notepad-editor">'
