@@ -11,13 +11,13 @@ module.exports = function (grunt) {
       options: {
         csslintrc: '.csslintrc'
       },
-      src: ['css/*.css', './com/**/*.css']
+      src: ['css/*.css', './com/**/*.css','*.css']
     },
     eslint: {
       options: {
         configFile: '.eslintrc.json'
       },
-      target: ['./js/*.js', './com/**/*.js']
+      target: ['./js/*.js', './com/**/*.js','*.js']
     },
     htmlmin: {
       options: {
@@ -29,13 +29,6 @@ module.exports = function (grunt) {
         dest: 'dist/index.html'
       }
     },
-    imagemin: {
-      files: {
-        expand: true,
-        src: ['./images/*.png'],
-        dest: 'dist/'
-      }
-    },
     copy: {
       html: {
         src: './index.html',
@@ -44,11 +37,11 @@ module.exports = function (grunt) {
     },
     concat: {
       js: {
-        src: ['js/*.js', './com/**/*.js'],
+        src: ['js/*.js', './com/**/*.js','*.js'],
         dest: 'dist/js/bundle.js'
       },
       css: {
-        src: ['css/*.css', './com/**/*.css'],
+        src: ['css/*.css', './com/**/*.css','*.css'],
         dest: 'dist/css/bundle.css'
       }
     },
@@ -81,10 +74,9 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-usemin');
 
   grunt.registerTask('lint', ['htmlhint', 'csslint', 'eslint']);
-  grunt.registerTask('build', ['copy:html', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin', 'htmlmin', 'imagemin', 'clean:end']);
+  grunt.registerTask('build', ['copy:html', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin', 'htmlmin', 'clean:end']);
 };
