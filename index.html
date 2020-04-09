@@ -3,22 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>记事本</title>
+  <!-- build:css bundle.min.css -->
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/dlg-common.css">
   <link rel="stylesheet" href="./com/menubar/menubar.css">
   <link rel="stylesheet" href="./index.css">
   <link rel="stylesheet" href="./com/font/font.css">
   <link rel="stylesheet" href="./com/list/list.css">
+  <!-- endbuild -->
 </head>
 <body>
   <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <!-- build:js bundle.min.js -->
   <script src="./js/app.js"></script>
   <script src="./js/menu-data.js"></script>
   <script src="./com/menubar/menubar.js"></script>
   <script src="./index.js"></script>
   <script src="./com/font/font.js"></script>
   <script src="./com/list/list.js"></script>
+  <!-- endbuild -->
 <script>
 $(function() {
   $menubar.show(np.menuData);
